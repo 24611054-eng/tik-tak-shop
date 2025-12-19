@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tik Tak Top Course</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script>
+    document.getElementById("formPendaftaran").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      fetch("https://script.google.com/macros/s/AKfycbz0gni9Iee8WE1IBA0Jyysr4svjJs4biR-8qzPS1AqyKb7eoYrMOaFZR7kklUClBp8J/exec", {
+        method: "POST",
+        body: new FormData(this),
+      })
+        .then(() => {
+          alert("Data berhasil disimpan");
+          this.reset();
+        })
+        .catch(() => alert("Gagal menyimpan data"));
+    });
+  </script>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <!-- Logo kiri -->
+      <div class="logo-kiri">
+        <img src="logo-tiktok-l-min.jpg" alt="Logo Tik Tak Top" />
+        <span class="logo-text">Tik Tak Top</span>
+      </div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Layanan</a>
+          <ul class="dropdown-menu">
+            <li><a href="#pendaftaran">Pendaftaran Anggota</a></li>
+            <li><a href="#informasi">Informasi Layanan</a></li>
+          </ul>
+        </li>
+        <li><a href="#kelas">Kelas</a></li>
+        <li><a href="#koleksi">Koleksi</a></li>
+      </ul>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" id="home">
+      <h1>Selamat Datang di Tik Tak Top Course</h1>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <h2>Tentang Kami</h2>
+      <p>
+        Tik Tak Top Course merupakan lembaga kursus komputer yang bergerak di bidang pendidikan dan pelatihan teknologi informasi. Lembaga ini menyediakan berbagai program kursus yang dirancang untuk meningkatkan keterampilan dan kompetensi
+        peserta di era digital.
+      </p>
+      <p>
+        Program kursus yang ditawarkan meliputi Desain Grafis, Web Programming, Data Analysis, serta berbagai kelas komputer lainnya yang disesuaikan dengan kebutuhan pemula hingga tingkat lanjutan. Seluruh materi disampaikan oleh
+        pengajaryang berpengalaman dan menggunakan metode pembelajaran yang mudah dipahami.
+      </p>
+    </section>
+
+    <!-- Pendaftaran -->
+    <section id="pendaftaran">
+      <h2>Pendaftaran Anggota</h2>
+
+      <form id="formPendaftaran">
+        <label>Nama Lengkap</label>
+        <input type="text" name="nama" required />
+
+        <label>Program Kursus</label>
+        <select name="kelas" required>
+          <option value="">-- Pilih Program --</option>
+          <option value="Desain Grafis">Desain Grafis</option>
+          <option value="Web Programming">Web Programming</option>
+          <option value="Data Analysis">Data Analysis</option>
+        </select>
+
+        <label>NIK / Nomor Induk Siswa</label>
+        <input type="text" name="nis" required />
+
+        <label>Alamat</label>
+        <textarea name="alamat" required></textarea>
+
+        <label>Nomor WhatsApp</label>
+        <input type="text" name="telepon" required />
+
+        <button type="submit">Daftar</button>
+      </form>
+    </section>
+
+    <!-- Informasi Layanan -->
+    <section id="informasi">
+      <h2>Informasi Layanan</h2>
+      <p>
+        Tik Tak Top Course menyediakan berbagai layanan kursus komputer yang dirancang untuk membantu peserta meningkatkan keterampilan di bidang teknologi informasi. Setiap layanan disusun berdasarkan kebutuhan pembelajaran, baik untuk
+        pemula maupun peserta tingkat lanjutan.
+      </p>
+      <p>
+        Layanan kursus yang tersedia meliputi pelatihan Desain Grafis, Web Programming, Data Analysis, serta penguasaan aplikasi perkantoran seperti Microsoft Word, Excel, dan PowerPoint. Materi pembelajaran disampaikan secara terstruktur
+        dengan kombinasi teori dan praktik langsung.
+      </p>
+    </section>
+
+    <!-- Kelas -->
+    <section id="kelas">
+      <h2>Daftar Kelas</h2>
+      <div class="kelas-list">
+        <div class="kelas">Kelas Dasar Web</div>
+        <div class="kelas">Kelas Python Pemula</div>
+        <div class="kelas">Kelas Excel untuk Data</div>
+        <div class="kelas">Kelas Desain Grafis</div>
+      </div>
+    </section>
+
+    <!-- Koleksi -->
+    <section id="koleksi">
+      <h2>Koleksi</h2>
+      <p>Koleksi modul dan materi pembelajaran digital Tik Tak Top.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Alamat: Jl. Teknologi No. 10, Indonesia</p>
+      <p>Kontak: 0812-3456-7890 | email@tiktaktop.com</p>
+      <p>Instagram: @tiktaktop | Facebook: Tik Tak Top Course</p>
+    </footer>
+  </body>
+</html>

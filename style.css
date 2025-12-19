@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(135deg, #00f2ea, #ff0050);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Dropdown */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+nav ul li:hover > ul,
+nav ul li:focus-within > ul {
+  display: block;
+}
+
+nav ul li ul li a {
+  color: #000;
+  display: block;
+  padding: 12px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+nav ul li ul li a:hover {
+  background: #0d6efd;
+  color: white;
+}
+.dropdown {
+  position: relative;
+}
+
+/* Menu dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* TAMPIL SAAT HOVER */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Item dropdown */
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #0d6efd;
+  color: #fff;
+}
+/* Jumbotron */
+.jumbotron {
+  height: 60vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  color: white;
+  font-size: 40px;
+}
+
+/* Section */
+section {
+  padding: 50px 80px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+/* Form */
+form {
+  max-width: 600px;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Kelas */
+.kelas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.kelas {
+  padding: 20px;
+  background: #e9f1ff;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #0d6efd;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+/* Logo kiri */
+.logo-kiri {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-kiri img {
+  width: 36px;
+  height: auto;
+  background: black;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.logo-text {
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}
+/* About section */
+#about {
+  text-align: center;
+}
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto 15px;
+}
+/* Information section */
+
+#informasi {
+  text-align: justify;
+}
+
+#informasi p {
+  margin-bottom: 15px;
+}
