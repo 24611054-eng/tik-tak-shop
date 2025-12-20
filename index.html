@@ -6,22 +6,6 @@
     <title>Tik Tak Top Course</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <script>
-    document.getElementById("formPendaftaran").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      fetch("https://script.google.com/macros/s/AKfycbz0gni9Iee8WE1IBA0Jyysr4svjJs4biR-8qzPS1AqyKb7eoYrMOaFZR7kklUClBp8J/exec", {
-        method: "POST",
-        body: new FormData(this),
-      })
-        .then(() => {
-          alert("Data berhasil disimpan");
-          this.reset();
-        })
-        .catch(() => alert("Gagal menyimpan data"));
-    });
-  </script>
-
   <body>
     <!-- Navbar -->
     <nav>
@@ -73,7 +57,7 @@
         <input type="text" name="nama" required />
 
         <label>Program Kursus</label>
-        <select name="kelas" required>
+        <select name="program" required>
           <option value="">-- Pilih Program --</option>
           <option value="Desain Grafis">Desain Grafis</option>
           <option value="Web Programming">Web Programming</option>
@@ -81,13 +65,13 @@
         </select>
 
         <label>NIK / Nomor Induk Siswa</label>
-        <input type="text" name="nis" required />
+        <input type="text" name="nik" required />
 
         <label>Alamat</label>
         <textarea name="alamat" required></textarea>
 
         <label>Nomor WhatsApp</label>
-        <input type="text" name="telepon" required />
+        <input type="text" name="whatsapp" required />
 
         <button type="submit">Daftar</button>
       </form>
@@ -129,5 +113,20 @@
       <p>Kontak: 0812-3456-7890 | email@tiktaktop.com</p>
       <p>Instagram: @tiktaktop | Facebook: Tik Tak Top Course</p>
     </footer>
+    <script>
+      document.getElementById("formPendaftaran").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        fetch("https://script.google.com/macros/s/AKfycbycNOqij58Jiv3_HjlDDNNAapoBHABuGcuJvJHJ0T1gh4Pmc9rUtkMzeKwUGe1YnzNKvA/exec", {
+          method: "POST",
+          body: new FormData(this),
+        })
+          .then(() => {
+            alert("Data berhasil disimpan");
+            this.reset();
+          })
+          .catch(() => alert("Gagal menyimpan data"));
+      });
+    </script>
   </body>
 </html>
